@@ -12,4 +12,3 @@ const Page = ({params}:any) => {
 }
 
 export default Page;
- 
