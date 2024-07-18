@@ -30,7 +30,7 @@ const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
   const [show, setShow] = useState(false);
   const [login, { isSuccess, error }] = useLoginMutation();
   const formik = useFormik({
-    initialValues: { email: "", password: "" },
+    initialValues: { email: "test@test.com", password: "000000000" },
     validationSchema: schema,
     onSubmit: async ({ email, password }) => {
       await login({ email, password });
@@ -56,6 +56,12 @@ const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
   return (
     <div className="w-full">
       <h1 className={`${styles.title}`}>Login with Padhlo.</h1>
+      <h6 style={{ textAlign: "center" }}>
+        {" "}
+        For Admin Test Click on Login if you are not admin
+      </h6>
+      <br />
+      <br />
       <form onSubmit={handleSubmit}>
         <label className={`${styles.label}`} htmlFor="email">
           Enter your Email
