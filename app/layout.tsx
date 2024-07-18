@@ -51,8 +51,8 @@ export default function RootLayout({
 }
 
 const Custom: FC<{ children: React.ReactNode }> = ({ children }) => {
-  // const { isLoading } = useLoadUserQuery({});
-  const isLoading = false;
+  const { isLoading } = useLoadUserQuery({});
+  // const isLoading = false;
   useEffect(() => {
     socketId.on("connection", (socket) => {});
   }, []);
