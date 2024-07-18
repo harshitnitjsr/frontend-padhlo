@@ -22,6 +22,7 @@ export const apiSlice = createApi({
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
+          console.log("hello");
           const result = await queryFulfilled;
           dispatch(
             userLoggedIn({
@@ -30,12 +31,12 @@ export const apiSlice = createApi({
             })
           );
         } catch (error: any) {
+          console.log("heello error");
           console.log(error);
         }
       },
     }),
   }),
 });
-
 
 export const { useRefreshTokenQuery, useLoadUserQuery } = apiSlice;
