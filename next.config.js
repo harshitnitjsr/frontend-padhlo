@@ -8,11 +8,5 @@ const nextConfig = {
     reactRoot: true,
     suppressHydrationWarning: true,
   },
-  exportPathMap: async function () {
-    return {
-      "/courses": { page: "/courses" },
-      // Add other paths as needed
-    };
-  },
 };
 module.exports = nextConfig;
