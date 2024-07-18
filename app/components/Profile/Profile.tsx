@@ -31,7 +31,7 @@ const Profile: FC<Props> = ({ user }) => {
 
     // const res = await axios.get("https://localhost:8000/api/v1/logout");
     // console.log(res);
-    await signOut({ callbackUrl: "http://localhost:3001" });
+    await signOut({ callbackUrl: "https://frontend-padhlo.vercel.app" });
   };
 
   if (typeof window !== "undefined") {
